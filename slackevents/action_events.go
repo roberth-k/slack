@@ -7,9 +7,10 @@ import (
 )
 
 type MessageActionResponse struct {
-	ResponseType    string `json:"response_type"`
-	ReplaceOriginal bool   `json:"replace_original"`
-	Text            string `json:"text"`
+	ResponseType    string        `json:"response_type"`
+	ReplaceOriginal bool          `json:"replace_original"`
+	Text            string        `json:"text"`
+	Blocks          []slack.Block `json:"blocks,omitempty"`
 }
 
 type MessageActionEntity struct {
